@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinznesia DOWNLOADER - Galaxy </title>
+ <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <div class="container">
+        <div class="logo">
+    DINZ <span>NESIA</span>
+</div>
+
+        <input type="text" id="url" placeholder="Paste TikTok / YouTube URL">
+
+        <button id="downloadBtn" onclick="downloadVideo()">
+            <span class="btn-text">DOWNLOAD</span>
+            <span class="loader" style="display: none;"></span>
+        </button>
+
+        <div class="result" id="result">
+            <div class="card">
+                <img id="thumb" class="thumbnail" src="https://placehold.co/600x350/111/FFF?text=Preview" alt="Preview">
+                <div class="title" id="title">Video Title</div>
+                
+                <a id="videoBtn" class="download-btn video-color" href="#" target="_blank">
+                    DOWNLOAD VIDEO
+                </a>
+                <a id="audioBtn" class="download-btn audio-color" href="#" target="_blank">
+                    DOWNLOAD MP3
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            © Dinznesia DOWNLOADER
+        </div>
+    </div>
+
+    <!-- Jalur diperbaiki: keluar dari folder views menggunakan ../ -->
+<script src="public/js/main.js"></script>
+</body>
+</html>
