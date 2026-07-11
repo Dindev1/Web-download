@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at center, #1b1429 0%, #06040a 100%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Efek Nebula Halus */
+body::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(138, 43, 226, 0.2);
+    filter: blur(100px);
+    top: 10%;
+    left: 10%;
+    z-index: 0;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 255, 255, 0.15);
+    filter: blur(100px);
+    bottom: 10%;
+    right: 10%;
+    z-index: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(15, 12, 25, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.2);
+    z-index: 1;
+}
+
+.logo {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #00ffff, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo span {
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+input {
+    width: 100%;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(138, 43, 226, 0.4);
+    color: #fff;
+    border-radius: 14px;
+    outline: none;
+    margin-bottom: 18px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #00ffff;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(45deg, #8a2be2, #00ffff);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Loader Spiner saat loading API */
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.result {
+    margin-top: 25px;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 18px;
+}
+
+.thumbnail {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.title {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.download-btn {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    margin-top: 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.video-color {
+    background: linear-gradient(45deg, #2b1055, #7597de);
+}
+
+.audio-color {
+    background: linear-gradient(45deg, #111, #333);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.download-btn:hover {
+    transform: scale(1.02);
+    filter: brightness(1.2);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #555;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
